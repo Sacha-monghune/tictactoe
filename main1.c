@@ -40,6 +40,7 @@ bool is_vwin(map_t *map, char p, int x)
 bool is_diagwin(map_t *map, char p)
 {
     int nb = 0;
+    int j = 1;
 
     for (int i = 1; i <= map->size_map && map->mapp[i][i]; i ++)
         if (map->mapp[i][i] == p)
@@ -49,8 +50,8 @@ bool is_diagwin(map_t *map, char p)
         return true;
     }
     nb = 0;
-    for (int i = map->size_map; i >= 1 && map->mapp[i][i]; i --)
-        if (map->mapp[i][i] == p)
+    for (int i = map->size_map; i >= 1 && map->mapp[j][i]; i --, j ++)
+        if (map->mapp[j][i] == p)
             nb ++;
     if (nb == map->size_map) {
         p = map->p1 ? printf("P1 win!\n") : printf("P2 win!\n");
