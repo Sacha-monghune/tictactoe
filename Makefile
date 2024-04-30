@@ -15,6 +15,8 @@ SRC	=	str_to_word_array_dop.c \
 		free_tab.c \
 		place.c \
 		main1.c \
+		help.c \
+		game.c \
 
 OBJ	=	$(SRC:.c=.o)
 

@@ -31,4 +31,6 @@ map_t *fill_map(map_t *map);
 void free_tab(char **array);
 void place(map_t *map, bool *p1_turn);
 void print_map(char **map);
+int help(void);
+void game(map_t *map, bool p1_turn);
 #endif /*_TICTACTOE_H_*/
